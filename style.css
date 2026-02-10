@@ -223,15 +223,6 @@ a {
     width: 600px
 }
 
-.avatar {
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    animation: float 3s ease-in-out infinite;
-}
-
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -739,7 +730,6 @@ a {
         width: 350px;
     }
 
-    .avatar,
     .image-placeholder {
         width: 300px;
         height: 300px;
@@ -804,7 +794,6 @@ a {
         font-size: 2.5rem;
     }
 
-    .avatar,
     .image-placeholder {
         width: 250px;
         height: 250px;

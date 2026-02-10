@@ -314,7 +314,7 @@ if (contactForm) {
 // ============================================
 
 window.addEventListener('scroll', () => {
-    const parallaxElements = document.querySelectorAll('.avatar, .image-placeholder');
+    const parallaxElements = document.querySelectorAll('.image-placeholder');
     
     parallaxElements.forEach(element => {
         let scrollPosition = window.pageYOffset;
