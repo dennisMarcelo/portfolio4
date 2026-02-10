@@ -1,7 +1,7 @@
 /* Variáveis de Cores - Dark Mode */
 :root {
     --primary-color: #6366f1;
-    --secondary-color: #ec4899;
+    --secondary-color: #A855F7;
     --dark-bg: #0f172a;
     --light-bg: #1e293b;
     --text-dark: #f1f5f9;
@@ -240,23 +240,18 @@ a {
 @keyframes blob {
     0% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        transform: scale(1) rotate(0deg);
     }
     25% {
         border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
-        transform: scale(1.1) rotate(90deg);
     }
     50% {
         border-radius: 70% 30% 66% 33% / 33% 30% 70% 67%;
-        transform: scale(0.95) rotate(180deg);
     }
     75% {
         border-radius: 33% 67% 33% 67% / 66% 33% 66% 33%;
-        transform: scale(1.05) rotate(270deg);
     }
     100% {
         border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        transform: scale(1) rotate(360deg);
     }
 }
 
@@ -350,13 +345,26 @@ a {
 }
 
 .image-placeholder {
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
     animation: blob 6s ease-in-out infinite;
     border: 3px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 17px;
 }
 
 /* Seção Projetos */
