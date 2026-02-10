@@ -100,7 +100,22 @@
         <h2 class="section-title">Meus Projetos</h2>
         <div class="projects-grid">
           <div class="project-card">
-            <div class="project-image"></div>
+            <div class="project-image">
+              <div class="carousel">
+                <div class="carousel-container">
+                  <img src="imgs/ecommerce-1.jpg" alt="Projeto E-commerce 1" class="carousel-image active">
+                  <img src="imgs/ecommerce-2.jpg" alt="Projeto E-commerce 2" class="carousel-image">
+                  <img src="imgs/ecommerce-3.jpg" alt="Projeto E-commerce 3" class="carousel-image">
+                </div>
+                <button class="carousel-btn prev" onclick="prevImage(event)">❮</button>
+                <button class="carousel-btn next" onclick="nextImage(event)">❯</button>
+                <div class="carousel-dots">
+                  <span class="dot active" onclick="goToImage(event, 0)"></span>
+                  <span class="dot" onclick="goToImage(event, 1)"></span>
+                  <span class="dot" onclick="goToImage(event, 2)"></span>
+                </div>
+              </div>
+            </div>
             <div class="project-content">
               <h3>Plataforma E-commerce</h3>
               <p>Uma plataforma completa de e-commerce com sistema de pagamento integrado e painel administrativo.</p>

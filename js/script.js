@@ -14,6 +14,50 @@ const anosExperienciaElement = document.getElementById('anos-experiencia');
 anosExperienciaElement.textContent = `${calcularExperiencia()}+`;
 
 // ============================================
+// CARROSSEL DE IMAGENS
+// ============================================
+
+function showImage(card, imageIndex) {
+    const images = card.querySelectorAll('.carousel-image');
+    const dots = card.querySelectorAll('.dot');
+    
+    // Remover classe active de todas as imagens e dots
+    images.forEach(img => img.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    // Adicionar classe active à imagem e dot corretos
+    if (images[imageIndex]) {
+        images[imageIndex].classList.add('active');
+        dots[imageIndex].classList.add('active');
+    }
+}
+
+function nextImage(event) {
+    const card = event.target.closest('.project-card');
+    const images = card.querySelectorAll('.carousel-image');
+    const activeImage = card.querySelector('.carousel-image.active');
+    const currentIndex = Array.from(images).indexOf(activeImage);
+    const nextIndex = (currentIndex + 1) % images.length;
+    
+    showImage(card, nextIndex);
+}
+
+function prevImage(event) {
+    const card = event.target.closest('.project-card');
+    const images = card.querySelectorAll('.carousel-image');
+    const activeImage = card.querySelector('.carousel-image.active');
+    const currentIndex = Array.from(images).indexOf(activeImage);
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    
+    showImage(card, prevIndex);
+}
+
+function goToImage(event, imageIndex) {
+    const card = event.target.closest('.project-card');
+    showImage(card, imageIndex);
+}
+
+// ============================================
 // MENU HAMBÚRGUER
 // ============================================
 
