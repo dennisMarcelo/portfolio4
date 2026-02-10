@@ -1,4 +1,19 @@
 // ============================================
+// Definir tempo de experiência
+// ============================================
+
+function calcularExperiencia() {
+    const dataInicio = new Date('2022-02-01');
+    const dataAtual = new Date();
+    const diferenca = dataAtual - dataInicio;
+    const anosExperiencia = Math.floor(diferenca / (1000 * 60 * 60 * 24 * 365));
+    return anosExperiencia;
+}
+
+const anosExperienciaElement = document.getElementById('anos-experiencia');
+anosExperienciaElement.textContent = `${calcularExperiencia()}+`;
+
+// ============================================
 // MENU HAMBÚRGUER
 // ============================================
 

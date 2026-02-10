@@ -223,6 +223,7 @@ a {
     width: 600px
 }
 
+/* Animações */
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
@@ -284,7 +285,7 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .sobre-text p {
