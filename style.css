@@ -237,6 +237,29 @@ a {
     }
 }
 
+@keyframes blob {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1) rotate(0deg);
+    }
+    25% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+        transform: scale(1.1) rotate(90deg);
+    }
+    50% {
+        border-radius: 70% 30% 66% 33% / 33% 30% 70% 67%;
+        transform: scale(0.95) rotate(180deg);
+    }
+    75% {
+        border-radius: 33% 67% 33% 67% / 66% 33% 66% 33%;
+        transform: scale(1.05) rotate(270deg);
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        transform: scale(1) rotate(360deg);
+    }
+}
+
 /* Seção Sobre */
 .sobre {
     padding: 100px 0;
@@ -323,6 +346,7 @@ a {
 .sobre-image {
     display: flex;
     justify-content: center;
+    filter: drop-shadow(0 20px 60px rgba(99, 102, 241, 0.3));
 }
 
 .image-placeholder {
@@ -331,7 +355,8 @@ a {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border-radius: 20px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-    animation: float 3s ease-in-out infinite;
+    animation: blob 6s ease-in-out infinite;
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Seção Projetos */
