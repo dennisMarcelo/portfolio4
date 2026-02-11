@@ -149,6 +149,10 @@ a {
     margin-top: 3rem;
 }
 
+.home-text {
+    min-width: 399px;
+}
+
 .home-text h1 {
     font-size: 3.5rem;
     font-weight: 700;
@@ -845,6 +849,10 @@ a {
     {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .home-text {
+        min-width: 320px;
     }
     
     .home-image
