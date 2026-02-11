@@ -1,5 +1,5 @@
 // ============================================
-// Definir tempo de experiência
+// DEFINIR ANOS DE EXPERIÊNCIA
 // ============================================
 
 function calcularExperiencia() {
@@ -128,7 +128,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observar elementos para animação
 const elementsToAnimate = document.querySelectorAll(
-    '.project-card, .tool-category, .timeline-item, .stat'
+    '.tool-category, .timeline-item, .stat'
 );
 
 elementsToAnimate.forEach(element => {
@@ -136,6 +136,67 @@ elementsToAnimate.forEach(element => {
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'all 0.6s ease';
     observer.observe(element);
+});
+
+// ============================================
+// DEFINIR PROJETOS
+// ============================================
+
+async function fetchProjetos() {
+    try {
+        const response = await fetch('../data/projetosData.json');
+        if (!response.ok) {
+            throw new Error('Erro ao carregar projetos');
+        }
+        const projetos = await response.json();
+        return projetos;
+    } catch (error) {
+        console.error('Erro:', error);
+        return [];
+    }
+}
+
+function renderProjetos(projetos) {
+    const projetosGrid = document.getElementById('projects-grid');
+    projetos.forEach(projeto => {
+        const card = document.createElement('div');
+        card.classList.add('project-card');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+
+        card.innerHTML = `
+            <div class="project-image">
+              <div class="carousel">
+                <div class="carousel-container">
+                  ${projeto.imgs.map((img, index) => `
+                    <img src="${img.url}" alt="${projeto.nome} ${index + 1}" class="carousel-image ${index === 0 ? 'active' : ''}">
+                  `).join('')}
+                </div>
+                <button class="carousel-btn prev" onclick="prevImage(event)">❮</button>
+                <button class="carousel-btn next" onclick="nextImage(event)">❯</button>
+                <div class="carousel-dots">
+                  ${projeto.imgs.map((_, index) => `
+                    <span class="dot ${index === 0 ? 'active' : ''}" onclick="goToImage(event, ${index})"></span>
+                  `).join('')}
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>${projeto.nome}</h3>
+              <p>${projeto.descricao}</p>
+              <div class="project-tags">
+                ${projeto.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+              </div>
+              ${projeto.projetoUrl ? `<a href="${projeto.projetoUrl}" class="project-link" target="_blank">Ver Projeto →</a>` : ''}
+        `;
+        projetosGrid.appendChild(card);
+    });
+}
+
+fetchProjetos().then(projetos => {
+    renderProjetos(projetos);
 });
 
 // ============================================
