@@ -1,68 +1,61 @@
 [
 {
-  "nome": "Projeto 1",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "tags": ["React", "Node.js", "MongoDB"],
-  "projetoUrl": "https://github.com/seu-usuario/projeto1",
+  "nome": "Recrutamento & Seleção",
+  "descricao": "Um projeto de recrutamento e seleção, onde os usuários podem criar e gerenciar vagas de emprego, além de relaizar candidaturas e entrevistas. O projeto inclui funcionalidades como filtro de candidatos, agendamento de entrevistas...",
+  "tags": ["C#", "CQRS", "StencilJs", "Ionic", "TypeScript"],
+  "projetoUrl": "https://trabalheconosco.motivabpo.com.br/",
   "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
+      {"url":"imgs/recrut/recrut1.png"},
+      {"url":"imgs/recrut/recrut2.png"},
+      {"url":"imgs/recrut/recrut3.png"},
+      {"url":"imgs/recrut/recrut4.png"},
+      {"url":"imgs/recrut/recrut5.png"},
+      {"url":"imgs/recrut/recrut6.png"},
+      {"url":"imgs/recrut/recrut7.png"}
     ]
 },
 {
-  "nome": "Projeto 2",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "tags": ["React", "Node.js", "MongoDB"],
-  "projetoUrl": "https://github.com/seu-usuario/projeto1",
+  "nome": "Automação de Tarefas PowerBi",
+  "descricao": "Um projeto com propósito de automatizar o processo de coleta e envio de relatórios diarios.",
+  "tags": ["C#", "WebSocket","TypeScript", "StencilJs", "Ionic", "CQRS"],
+  "projetoUrl": "",
   "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
+      {"url":"imgs/powerbi/powerbi1.png"},
+      {"url":"imgs/powerbi/powerbi2.png"},
+      {"url":"imgs/powerbi/powerbi3.png"},
+      {"url":"imgs/powerbi/powerbi4.png"}
     ]
 },
 {
-  "nome": "Projeto 3",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  "tags": ["React", "Node.js", "MongoDB"],
-  "projetoUrl": "https://github.com/seu-usuario/projeto1",
+  "nome": "Trivia Night",
+  "descricao": "Um projeto de trivia, onde os usuários podem testar seus conhecimentos em diversas categorias. O projeto inclui funcionalidades como temporizador, pontuação e feedback imediato para cada resposta.",
+  "tags": ["React", "Redux"],
+  "projetoUrl": "https://sd-010-b-project-trivia-react-redux.vercel.app",
   "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
+      {"url":"imgs/trivia/trivia1.png"},
+      {"url":"imgs/trivia/trivia2.png"},
+      {"url":"imgs/trivia/trivia3.png"},
+      {"url":"imgs/trivia/trivia4.png"},
+      {"url":"imgs/trivia/trivia5.png"}
     ]
 },
 {
-  "nome": "Projeto 4",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "tags": ["React", "Node.js", "MongoDB"],
-  "projetoUrl": "https://github.com/seu-usuario/projeto1",
+  "nome": "Auditoria",
+  "descricao": "Projeto com propósito de auditar as vendas dos operadores.",
+  "tags": [ "C#", "CQRS", "Web", "StencilJs", "Ionic","TypeScript"],
+  "projetoUrl": "",
   "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
+      {"url":"imgs/auditor/auditor1.png"},
+      {"url":"imgs/auditor/auditor2.png"}
     ]
 },
 {
-  "nome": "Projeto 5",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
-  "tags": ["React", "Node.js", "MongoDB"],
+  "nome": "Lista de tarefas",
+  "descricao": "Um projeto simples de lista de tarefas, onde os usuários podem criar, editar e excluir tarefas. Um dos meus primeiros projetos utilizando tecnologis web.",
+  "tags": ["HTML", "CSS", "JavaScript"],
   "projetoUrl": "https://github.com/seu-usuario/projeto1",
   "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
-    ]
-},
-{
-  "nome": "Projeto 6",
-  "descricao": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  "tags": ["React", "Node.js", "MongoDB"],
-  "projetoUrl": "https://github.com/seu-usuario/projeto1",
-  "imgs":[
-      {"url":"imgs/luffy1.jpg"},
-      {"url":"imgs/luffy2.jpeg"},
-      {"url":"imgs/luffy3.png"}
+      {"url":"imgs/listaTarefas/lista1.png"}
     ]
 }
 ]
