@@ -250,7 +250,7 @@ aboutObserver.observe(aboutSection);
 const contactForm = document.querySelector('.contact-form');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
 
         // Validação básica
@@ -262,7 +262,7 @@ if (contactForm) {
                 isValid = false;
                 input.style.borderColor = '#ef4444';
             } else {
-                input.style.borderColor = '#e2e8f0';
+                input.style.borderColor = '#334155';
             }
         });
 
@@ -277,12 +277,56 @@ if (contactForm) {
                 return;
             }
 
-            // Simular envio
-            showNotification('Mensagem enviada com sucesso!', 'success');
-            contactForm.reset();
-            inputs.forEach(input => {
-                input.style.borderColor = '#e2e8f0';
-            });
+            // Desabilitar botão durante o envio
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+
+            try {
+                // Preparar dados do formulário
+                const formData = new FormData(contactForm);
+                
+                // Se os inputs não têm o atributo name, adicionar os dados manualmente
+                const nameInput = contactForm.querySelector('input[type="text"]');
+                const emailField = contactForm.querySelector('input[type="email"]');
+                const subjectInput = contactForm.querySelector('input[placeholder="Assunto"]');
+                const messageInput = contactForm.querySelector('textarea');
+
+                const data = {
+                    name: nameInput.value,
+                    email: emailField.value,
+                    subject: subjectInput.value,
+                    message: messageInput.value,
+                    _subject: `Novo contato: ${subjectInput.value}`
+                };
+
+                // Fazer POST para Formspree
+                const response = await fetch('https://formspree.io/f/xnjbpnzq', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                if (response.ok) {
+                    showNotification('Mensagem enviada com sucesso!', 'success');
+                    contactForm.reset();
+                    inputs.forEach(input => {
+                        input.style.borderColor = '#334155';
+                    });
+                } else {
+                    showNotification('Erro ao enviar mensagem. Tente novamente!', 'error');
+                }
+            } catch (error) {
+                console.error('Erro:', error);
+                showNotification('Erro ao enviar mensagem. Tente novamente!', 'error');
+            } finally {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
         } else {
             showNotification('Por favor, preencha todos os campos!', 'error');
         }
