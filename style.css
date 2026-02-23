@@ -280,7 +280,7 @@ a {
     font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     color: var(--text-dark);
     position: relative;
     display: inline-block;
@@ -950,6 +950,7 @@ a {
 
     .section-title {
         font-size: 2rem;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -988,5 +989,6 @@ a {
 
     .section-title {
         font-size: 1.8rem;
+        margin-bottom: 1rem;
     }
 }
