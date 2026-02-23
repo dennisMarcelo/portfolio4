@@ -5,13 +5,13 @@
   "tags": ["C#", "CQRS", "StencilJs", "Ionic", "TypeScript"],
   "projetoUrl": "https://trabalheconosco.motivabpo.com.br/",
   "imgs":[
-      {"url":"imgs/recrut/recrut1.png"},
-      {"url":"imgs/recrut/recrut2.png"},
-      {"url":"imgs/recrut/recrut3.png"},
-      {"url":"imgs/recrut/recrut4.png"},
-      {"url":"imgs/recrut/recrut5.png"},
-      {"url":"imgs/recrut/recrut6.png"},
-      {"url":"imgs/recrut/recrut7.png"}
+      {"url":"Imgs/recrut/recrut1.png"},
+      {"url":"Imgs/recrut/recrut2.png"},
+      {"url":"Imgs/recrut/recrut3.png"},
+      {"url":"Imgs/recrut/recrut4.png"},
+      {"url":"Imgs/recrut/recrut5.png"},
+      {"url":"Imgs/recrut/recrut6.png"},
+      {"url":"Imgs/recrut/recrut7.png"}
     ]
 },
 {
@@ -20,10 +20,10 @@
   "tags": ["C#", "WebSocket","TypeScript", "StencilJs", "Ionic", "CQRS"],
   "projetoUrl": "",
   "imgs":[
-      {"url":"imgs/powerbi/powerbi1.png"},
-      {"url":"imgs/powerbi/powerbi2.png"},
-      {"url":"imgs/powerbi/powerbi3.png"},
-      {"url":"imgs/powerbi/powerbi4.png"}
+      {"url":"Imgs/powerbi/powerbi1.png"},
+      {"url":"Imgs/powerbi/powerbi2.png"},
+      {"url":"Imgs/powerbi/powerbi3.png"},
+      {"url":"Imgs/powerbi/powerbi4.png"}
     ]
 },
 {
@@ -32,11 +32,11 @@
   "tags": ["React", "Redux"],
   "projetoUrl": "https://sd-010-b-project-trivia-react-redux.vercel.app",
   "imgs":[
-      {"url":"imgs/trivia/trivia1.png"},
-      {"url":"imgs/trivia/trivia2.png"},
-      {"url":"imgs/trivia/trivia3.png"},
-      {"url":"imgs/trivia/trivia4.png"},
-      {"url":"imgs/trivia/trivia5.png"}
+      {"url":"Imgs/trivia/trivia1.png"},
+      {"url":"Imgs/trivia/trivia2.png"},
+      {"url":"Imgs/trivia/trivia3.png"},
+      {"url":"Imgs/trivia/trivia4.png"},
+      {"url":"Imgs/trivia/trivia5.png"}
     ]
 },
 {
@@ -45,8 +45,8 @@
   "tags": [ "C#", "CQRS", "Web", "StencilJs", "Ionic","TypeScript"],
   "projetoUrl": "",
   "imgs":[
-      {"url":"imgs/auditor/auditor1.png"},
-      {"url":"imgs/auditor/auditor2.png"}
+      {"url":"Imgs/auditor/auditor1.png"},
+      {"url":"Imgs/auditor/auditor2.png"}
     ]
 },
 {
@@ -55,7 +55,7 @@
   "tags": ["HTML", "CSS", "JavaScript"],
   "projetoUrl": "https://github.com/seu-usuario/projeto1",
   "imgs":[
-      {"url":"imgs/listaTarefas/lista1.png"}
+      {"url":"Imgs/listaTarefas/lista1.png"}
     ]
 }
 ]

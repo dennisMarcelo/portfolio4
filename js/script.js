@@ -144,7 +144,7 @@ elementsToAnimate.forEach(element => {
 
 async function fetchProjetos() {
     try {
-        const response = await fetch('../data/projetosData.json');
+        const response = await fetch('./data/projetosData.json');
         if (!response.ok) {
             throw new Error('Erro ao carregar projetos');
         }
