@@ -556,6 +556,7 @@ a {
 .ferramentas {
     padding: 100px 0;
     background: var(--dark-bg);
+    min-height: 100vh;
 }
 
 .tools-grid {
